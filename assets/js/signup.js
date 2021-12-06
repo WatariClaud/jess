@@ -27,16 +27,18 @@
         axios(data)
         .then((result) => {
             console.log(result.data);
+            result.data = [result.data];
             var msg = Object.values(result.data)[0];
-            var token = Object.values(result.data)[1];
+            var token = Object.values(msg)[1];
+            console.log(msg);
 
-            alert(msg);
+            alert(typeof(msg) === 'string' ? msg : Object.values(msg)[0]);
 
-            if(token) {
+            if(msg.token) {
                 localStorage.setItem('token', token);
                 setTimeout(() => {
                     window.location.href = './dashboard.html';
-                }, 2000);
+                }, 1000);
             }
         })
         .catch((e) => {
