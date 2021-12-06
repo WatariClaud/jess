@@ -5,7 +5,7 @@ if(!token) window.location.href = './login.html';
 
     var user_ = document.getElementById('user_');
 
-    var apiUrl = 'http://localhost/jess/api/users./get_single.php';
+    var apiUrl = 'http://4c97-105-160-43-36.ngrok.io/jess/api/users./get_single.php';
 
     var data = {
         url: apiUrl,
@@ -39,7 +39,7 @@ function add_parking(e) {
     spots = spots.value;
     price = price.value;
 
-    var apiUrl = 'http://localhost/jess/api/parking/add_space.php';
+    var apiUrl = 'http://4c97-105-160-43-36.ngrok.io/jess/api/parking/add_space.php';
 
     var data = {
         url: apiUrl,
