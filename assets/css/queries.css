@@ -1,0 +1,66 @@
+@media screen and (max-width: 1000px) {
+    .main {
+        width: 70%;
+    }
+    #menu-container {
+        margin: 1rem 130px;
+    }
+    .park-content {
+        width: 80%;
+    }
+    #container h1 {
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+    #container h1 {
+        font-size: 2rem;
+        width: 90%;
+    }
+    #container h2 {
+        width: 90%;
+    }
+    .app-btn {
+        max-width: 140px;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .input-container {
+        margin-bottom: 1rem;
+        width: 90%;
+    }
+    .form {
+        width: 80%;
+        margin-top: 6rem;
+    }
+    .form ul {
+        margin-left: -2rem;
+    }
+    .input {
+        padding: 7px;
+        font-size: 1rem;
+    }
+    .main {
+        width: 90%;
+    }
+    #menu-container {
+        margin: 1rem 40px;
+    }
+    .park-content {
+        width: 70%;
+    }
+    #menu-container {
+        bottom: 0;
+        top: auto;
+        margin: 0;
+        margin: 5rem 2rem;
+        width: 100px;
+        font-size: 0.8rem;
+    }
+    .notifications li {
+        margin-bottom: 5px;
+    }
+}

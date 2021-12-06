@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/queries.css">
+    <title>Signup - Jess App</title>
+</head>
+<body>
+    <div id="container" class = "unmain-container">
+        <div id="top-content">
+            <div id="content">
+                <form id="form" class="form">
+                    <ul>
+                        <li>
+                            <div class="input-container">
+                                <label for="name">Name:</label>
+                            </div>
+                            <div class="input-container">
+                                <input class = "input" name = "name" id = "name" type = "text">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input-container">
+                                <label for="phone">Phone:</label>
+                            </div>
+                            <div class="input-container">
+                                <input class = "input" name = "phone" id = "phone" type = "tel">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input-container">
+                                <label for="password">Password:</label>
+                            </div>
+                            <div class="input-container">
+                                <input class = "input" name = "password" id = "password" type = "password">
+                            </div>
+                        </li>
+                        <li>
+                            <button class = "app-btn s-btn" id = "submit">Create my account</button>
+                        </li>
+                        <li>
+                            <p>Already have an account?<br/><a class = "item" href="./login.html">Sign in here</a></p>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/signup.js"></script>
+</body>
+</html>
