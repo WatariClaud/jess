@@ -7,7 +7,7 @@
     var phoneInput = document.getElementById('phone');
     var passwordInput = document.getElementById('password');
 
-    var apiUrl = 'https://f642-105-160-43-36.ngrok.io/jess/api/users/create.php';
+    var apiUrl = 'https://a002-105-160-43-36.ngrok.io/jess/api/users/create.php';
 
     button.onclick = function(e) {
         e.preventDefault();
