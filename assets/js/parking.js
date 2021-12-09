@@ -5,7 +5,7 @@ if(!token) window.location.href = './login.html';
 
     var user_ = document.getElementById('user_');
 
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/jess/api/users./get_single.php';
+    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/users./get_single.php';
 
     var data = {
         url: apiUrl,
@@ -28,7 +28,7 @@ if(!token) window.location.href = './login.html';
 function find_parking() {
     var parkingDiv = document.getElementById('park-container');
 
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/jess/api/parking/find_available.php';
+    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/parking/find_available.php';
 
     var data = {
         url: apiUrl,
@@ -86,7 +86,7 @@ function book_spot() {
     
                 var spot_id = e.target.id.split('-')[1];
     
-                var apiUrl = 'https://jess-parking-app.herokuapp.com/jess/api/parking/book_space.php?id='+spot_id;
+                var apiUrl = 'https://jess-parking-app.herokuapp.com/api/parking/book_space.php?id='+spot_id;
 
                 var twoHours = new Date().getHours() + 2;
     
