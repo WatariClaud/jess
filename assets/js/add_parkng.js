@@ -5,7 +5,7 @@ if(!token) window.location.href = './login.html';
 
     var user_ = document.getElementById('user_');
 
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/jess/api/users./get_single.php';
+    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/users./get_single.php';
 
     var data = {
         url: apiUrl,
@@ -39,7 +39,7 @@ function add_parking(e) {
     spots = spots.value;
     price = price.value;
 
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/jess/api/parking/add_space.php';
+    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/parking/add_space.php';
 
     var data = {
         url: apiUrl,
