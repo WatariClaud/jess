@@ -5,7 +5,7 @@ if(!token) window.location.href = './login.html';
 
     var user_ = document.getElementById('user_');
 
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/jess/api/users/get_single.php';
+    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/users/get_single.php';
 
     var data = {
         url: apiUrl,
@@ -35,7 +35,7 @@ function find_tickets() {
 
     var parkingTitleInactive = document.getElementById('inactive-tickets');
 
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/jess/api/tickets/user_tickets.php';
+    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/tickets/user_tickets.php';
 
     var data = {
         url: apiUrl,
@@ -115,7 +115,7 @@ function pay_ticket() {
     
                 var ticket_id = e.target.id.split('-')[1];
     
-                var apiUrl = 'https://jess-parking-app.herokuapp.com/jess/api/tickets/pay_ticket.php?id='+ticket_id;
+                var apiUrl = 'https://jess-parking-app.herokuapp.com/api/tickets/pay_ticket.php?id='+ticket_id;
                                 
                 var amounts = document.getElementsByClassName('amt');
 
