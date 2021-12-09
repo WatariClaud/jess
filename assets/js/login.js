@@ -6,7 +6,7 @@
     var phoneInput = document.getElementById('phone');
     var passwordInput = document.getElementById('password');
 
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/jess/api/users/authenticate.php';
+    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/users/authenticate.php';
 
     button.onclick = function(e) {
         e.preventDefault();
