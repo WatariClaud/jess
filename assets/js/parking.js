@@ -5,7 +5,7 @@ if(!token) window.location.href = './login.html';
 
     var user_ = document.getElementById('user_');
 
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/users./get_single.php';
+    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/users/get_single.php';
 
     var data = {
         url: apiUrl,
