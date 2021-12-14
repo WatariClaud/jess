@@ -14,7 +14,7 @@
             width: 90%;
         }
         .mid-section {
-            padding-top: 1rem;
+            padding-top: 2.5rem;
         }
         @media screen and (max-width: 768px) {
             .form {
@@ -28,34 +28,33 @@
     <div id="container" class = "-main-container">
         <div id="menu-container">
             <div class="menu-content">
-                <p id = "user_"></p>
+                <p id = "user_">Checking...</p>
                 <div class="notifications">
                     <ul>
-                        <li>
-                            <a href="#" class = "hidden">Notifications&ensp;<span class = "notif-span">(2)</span></a>
+                        <li class = "hidden">
+                            <a href="#">Notifications&ensp;<span class = "notif-span">(2)</span></a>
+                        </li>
+                        <li class = "hidden">
+                            <a href="#" >Settings</a>
                         </li>
                         <li>
-                            <a href="#" class = "hidden">Settings</a>
+                            <a href="../dashboard.html">Home<span class = 'right'>&#10095;</span></a>
                         </li>
                         <li>
-                            <a href="./add_parking.html">Admin</a>
-                        </li>
-                        <li>
-                            <a href="#logout" onclick="return false" id = "logout">Logout</a>
+                            <a href="#logout" onclick="return false" id = "logout">Logout <span class = 'right'>&#x2716;</span></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
         <main class="main">
+            <br> <br>
             <section class="mid-section">
-                <a href="./add_parking.html" class="item">
+                <a href="./add_parking.html" class="item active">
                     Add Parking Space
                 </a>
-                <a href="../dashboard.html" class="item">
-                    Home
-                </a>
             </section>
+            <br>
             <hr>
             <form id="form" class="form">
                 <ul>
@@ -87,9 +86,10 @@
                         <button class = "app-btn s-btn" id = "submit">Add Parking Details</button>
                     </li>
                 </ul>
-            </
+            </form>
         </main>
     </div>
+    <button id="menu">&#9776;</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../assets/js/add_parkng.js"></script>
     <script src="../../assets/js/logout.js"></script>

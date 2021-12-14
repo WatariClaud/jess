@@ -1,7 +1,8 @@
-(function logIn() {
-    var token = localStorage.getItem('token');
+var token = localStorage.getItem('token');
 
-    if(token) window.location.href = './dashboard.html';
+if(token) window.location.href = './dashboard.html';
+
+(function logIn() {
     var button = document.getElementById('submit');
     var phoneInput = document.getElementById('phone');
     var passwordInput = document.getElementById('password');

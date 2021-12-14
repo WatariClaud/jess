@@ -17,20 +17,23 @@
     <div id="container" class = "-main-container">
         <div id="menu-container">
             <div class="menu-content">
-                <p id = "user_"></p>
+                <p id = "user_">Checking...</p>
                 <div class="notifications">
                     <ul>
-                        <li>
-                            <a href="#" class = "hidden">Notifications&ensp;<span class = "notif-span">(2)</span></a>
+                        <li class = "hidden">
+                            <a href="#">Notifications&ensp;<span class = "notif-span">(2)</span></a>
+                        </li>
+                        <li class = "hidden">
+                            <a href="#">Settings</a>
                         </li>
                         <li>
-                            <a href="#" class = "hidden">Settings</a>
+                            <a href="./admin/add_parking.html">Admin<span class = 'right'>&#10095;</span></a>
+                        </li>
+                        <li class = "hidden">
+                            <a href="#">Profile</a>
                         </li>
                         <li>
-                            <a href="./admin/add_parking.html">Admin</a>
-                        </li>
-                        <li>
-                            <a href="#logout" onclick="return false" id = "logout">Logout</a>
+                            <a href="#logout" onclick="return false" id = "logout">Logout<span class = 'right'>&#x2716;</span></a>
                         </li>
                     </ul>
                 </div>
@@ -45,6 +48,7 @@
                     My tickets
                 </a>
             </section>
+            <br>
             <hr>
             <div id="park-container-active">
                 <h5 id="active-tickets" class = "hidden"></h5>
@@ -54,6 +58,7 @@
             </div>
         </main>
     </div>
+    <button id="menu">&#9776;</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../assets/js/tickets.js"></script>
     <script src="../assets/js/logout.js"></script>

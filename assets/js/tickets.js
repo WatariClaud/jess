@@ -154,3 +154,11 @@ function pay_ticket() {
 };
 
 find_tickets();
+
+const menu_toggle = document.getElementById('menu');
+
+const menu_item = document.getElementById('menu-container');
+
+menu_toggle.addEventListener('click', () => {
+    menu_item.classList.contains('hidden') ? menu_item.classList.remove('hidden') : menu_item.classList.add('hidden');
+});

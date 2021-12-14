@@ -1,5 +1,5 @@
 var token = localStorage.getItem('token');
-if(!token) window.location.href = './login.html';
+if(!token) window.location.href = '../login.html';
 
 (function find_user_data() {
 
@@ -69,3 +69,11 @@ function add_parking(e) {
 var button = document.getElementById('submit');
 
 button.addEventListener('click', add_parking);
+
+const menu_toggle = document.getElementById('menu');
+
+const menu_item = document.getElementById('menu-container');
+
+menu_toggle.addEventListener('click', () => {
+    menu_item.classList.contains('hidden') ? menu_item.classList.remove('hidden') : menu_item.classList.add('hidden');
+});

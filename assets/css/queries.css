@@ -1,15 +1,20 @@
 @media screen and (max-width: 1000px) {
     .main {
-        width: 70%;
-    }
-    #menu-container {
-        margin: 1rem 130px;
+        margin-left: 17rem;
     }
     .park-content {
         width: 80%;
     }
     #container h1 {
         font-size: 3rem;
+    }
+}
+@media screen and (max-width: 910px) {
+    .main {
+        width: 60%;
+    }
+    .mid-section .item {
+        padding: 2rem 4rem;
     }
 }
 @media screen and (max-width: 768px) {
@@ -45,9 +50,7 @@
     }
     .main {
         width: 90%;
-    }
-    #menu-container {
-        margin: 1rem 40px;
+        margin: 0 auto;
     }
     .park-content {
         width: 70%;
@@ -55,12 +58,22 @@
     #menu-container {
         bottom: 0;
         top: auto;
-        margin: 0;
-        margin: 5rem 2rem;
-        width: 100px;
-        font-size: 0.8rem;
+        right: 0;
+        left: auto;
+        margin-right: 1rem;
+        height: 300px;
+    }
+    .notifications ul {
+        margin-top: 5rem;
     }
     .notifications li {
         margin-bottom: 5px;
+    }
+    .mid-section .item{
+        padding: 1rem;
+        margin-left: 0;
+    }
+    #menu {
+        display: block;
     }
 }
