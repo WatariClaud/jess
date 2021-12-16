@@ -207,7 +207,12 @@ function pay_ticket() {
                 axios(data)
                 .then((result) => {
                     console.log(result);
-                    alert(result.data.Message || result.data.Error);
+                    result.data = [result.data];
+                    var msg = Object.values(result.data)[0];
+                    var token = Object.values(msg)[1];
+                    console.log(msg);
+
+                    alert(typeof(msg) === 'string' ? msg : Object.values(msg)[0]);
                 
                     window.location.reload();
                 })
