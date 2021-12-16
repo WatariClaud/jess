@@ -96,7 +96,7 @@ function find_tickets() {
                 }
             }
         }
-        pay_ticket();
+        show_modal();
     })
     .catch((e) => {
         console.log(e);
@@ -106,17 +106,83 @@ function find_tickets() {
 var buttons = document.getElementsByClassName('btn');
 
 
+function show_modal() {
+    for(var i = 0; i < buttons.length; i ++) {
+    
+        buttons[i].onclick = function(e) {
+            e.preventDefault();
+
+            const modal = document.getElementById('modal');
+
+            modal.classList.remove('hidden');
+
+            modal.innerHTML = `
+                
+                <div class="modal-content">
+                <span id="hide">X</span>
+                <h2>Pay with</h2>
+                <ul>
+                    <li>
+                        <input type="radio" id="mpesa" name="payment" value="mpesa">
+                        <label for="html"><img src="../assets/images/mpesa.jpg" alt="" class = 'icon'> MPesa</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="kcb" name="payment" value="kcb">
+                        <label for="html"><img src="../assets/images/kcb.png" alt="" class = 'icon'> KCB</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="visa" name="payment" value="visa">
+                        <label for="html"><img src="../assets/images/visa.png" alt="" class = 'icon'> Visa</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="equity" name="payment" value="equity">
+                        <label for="html"><img src="../assets/images/equity.png" alt="" class = 'icon'> Equity</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="mastercard" name="payment" value="mastercard">
+                        <label for="html"><img src="../assets/images//mastercard.png" alt="" class = 'icon'> Mastercard</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="airtel" name="payment" value="airtel">
+                        <label for="html"><img src="../assets/images/airtel.png" alt="" class = 'icon'> Airtel</label>
+                    </li>
+                </ul>
+                &ensp;<button class = "p-btn" id = '${e.target.id.split('-')[1]}'>Submit Payment</button>
+            </div>
+            `;
+
+        pay_ticket();
+        }
+    }
+};
+
 function pay_ticket() {
-    setTimeout(() => {
-        for(var i = 0; i < buttons.length; i ++) {
-    
-            buttons[i].onclick = function(e) {
-                e.preventDefault();
-    
-                var ticket_id = e.target.id.split('-')[1];
-    
+    const submissions =  document.getElementsByClassName('p-btn')[0];
+
+    console.log(submissions);
+
+    submissions.onclick = function(e) {
+        
+        e.preventDefault();
+        let htmlNodes = document.getElementsByName('payment');
+        let radioButtonsArray = Array.from(htmlNodes);
+            
+        let valueChecked = '';
+            
+        let isAnyRadioButtonChecked = radioButtonsArray.some(element =>{
+            element.checked ? valueChecked = element.value : valueChecked = null;
+                return element.checked;
+        });
+        console.log(isAnyRadioButtonChecked);
+        !isAnyRadioButtonChecked
+        ?
+            alert('You must select one payment method')
+        :
+            (function show_modal() {
+                var ticket_id = e.target.id;
+                
                 var apiUrl = 'https://jess-parking-app.herokuapp.com/api/tickets/pay_ticket.php?id='+ticket_id;
-                                
+                                            
                 var amounts = document.getElementsByClassName('amt');
 
                 var amount = 0;
@@ -125,7 +191,7 @@ function pay_ticket() {
                     console.log(amounts[i].className.split('-')[1]);
                     amount = amounts[i].className.split('-')[1];
                 }
-    
+                
                 var data = {
                     url: apiUrl,
                     method: 'POST',
@@ -137,20 +203,20 @@ function pay_ticket() {
                         datepaid:new Date().getFullYear() + '/' + new Date().getMonth() +  '/' + new Date().getDate() + ' : ' + new Date().getHours() + ':' + new Date().getMinutes()
                     }
                 };
-    
+                
                 axios(data)
                 .then((result) => {
                     console.log(result);
                     alert(result.data.Message || result.data.Error);
-    
+                
                     window.location.reload();
                 })
                 .catch((e) => {
                     console.log(e);
                 });
-            }
-        }
-    }, 2000);
+            })();
+        console.log(e.target.id);
+    }
 };
 
 find_tickets();
