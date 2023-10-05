@@ -1,6 +1,6 @@
 var token = localStorage.getItem('token');
 if(!token) window.location.href = './login.html';
-var apiUrl = 'https://jess-parking-app.herokuapp.com';
+var apiUrl = 'https://jess-production.up.railway.app';
 
 (function find_user_data() {
 
