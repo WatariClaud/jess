@@ -1,11 +1,11 @@
 var token = localStorage.getItem('token');
 if(!token) window.location.href = '../login.html';
+var apiUrl = 'https://jess-production.up.railway.app';
 
 (function find_user_data() {
 
     var user_ = document.getElementById('user_');
-
-    var apiUrl = 'https://jess-production.up.railway.app/api/users/get_single.php';
+    apiUrl = apiUrl + '/users/get_single.php';
 
     var data = {
         url: apiUrl,
@@ -39,7 +39,7 @@ function add_parking(e) {
     spots = spots.value;
     price = price.value;
 
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/parking/add_space.php';
+    apiUrl = apiUrl + '/api/parking/add_space.php';
 
     var data = {
         url: apiUrl,
