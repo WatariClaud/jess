@@ -1,11 +1,11 @@
 var token = localStorage.getItem('token');
 if(!token) window.location.href = './login.html';
+var apiUrl = 'https://jess-parking-app.herokuapp.com';
 
 (function find_user_data() {
 
     var user_ = document.getElementById('user_');
-
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/users/get_single.php';
+    apiUrl = apiUrl + '/api/users/get_single.php';
 
     var data = {
         url: apiUrl,
@@ -27,8 +27,7 @@ if(!token) window.location.href = './login.html';
 
 function find_parking() {
     var parkingDiv = document.getElementById('park-container');
-
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/parking/find_available.php';
+    apiUrl = apiUrl + '/api/parking/add_space.php';
 
     var data = {
         url: apiUrl,
@@ -85,8 +84,7 @@ function book_spot() {
                 e.preventDefault();
     
                 var spot_id = e.target.id.split('-')[1];
-    
-                var apiUrl = 'https://jess-parking-app.herokuapp.com/api/parking/book_space.php?id='+spot_id;
+                apiUrl = apiUrl + '/api/parking/book_space.php?id='+spot_id;
 
                 var twoHours = new Date().getHours() + 2;
     
