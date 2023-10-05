@@ -25,14 +25,14 @@ if(token) window.location.href = './dashboard.html';
 
         axios(data)
         .then((result) => {
-            console.log(result.data);
+            // console.log(result.data);
             result.data = [result.data];
             var msg = Object.values(result.data)[0];
             var token = Object.values(msg)[1];
-            console.log(msg);
 
             alert(typeof(msg) === 'string' ? msg : Object.values(msg)[0]);
 
+            console.log(msg.token);
             if(msg.token) {
                 localStorage.setItem('token', token);
                 setTimeout(() => {
