@@ -32,7 +32,7 @@ if(token) window.location.href = './dashboard.html';
 
             alert(typeof(msg) === 'string' ? msg : Object.values(msg)[0]);
 
-            console.log(msg.token);
+            console.log({msg, token});
             if(msg.token) {
                 localStorage.setItem('token', token);
                 setTimeout(() => {
