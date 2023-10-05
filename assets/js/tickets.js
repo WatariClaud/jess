@@ -35,7 +35,7 @@ function find_tickets() {
 
     var parkingTitleInactive = document.getElementById('inactive-tickets');
 
-    var apiUrl = 'https://jess-parking-app.herokuapp.com/api/tickets/user_tickets.php';
+    var apiUrl = 'https://jess-production.up.railway.app/api/tickets/user_tickets.php';
 
     var data = {
         url: apiUrl,
@@ -181,7 +181,7 @@ function pay_ticket() {
             (function show_modal() {
                 var ticket_id = e.target.id;
                 
-                var apiUrl = 'https://jess-parking-app.herokuapp.com/api/tickets/pay_ticket.php?id='+ticket_id;
+                var apiUrl = 'https://jess-production.up.railway.app/api/tickets/pay_ticket.php?id='+ticket_id;
                                             
                 var amounts = document.getElementsByClassName('amt');
 
